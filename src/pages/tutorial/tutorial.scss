@@ -14,10 +14,28 @@ page-tutorial {
   }
 
   .slide-image {
-    max-height: 50%;
-    max-width: 60%;
-    margin: 36px 0;
+    max-height: 70%;
+    max-width: 70%;
+    margin-top: 150px;
   }
+  .button-ios1 {
+    margin-left: 35%;
+    margin-right: 50%;
+    padding: 0 3em;
+    text-align: center;
+    margin-top: 50px;
+  
+  }
+
+   .button-ios2 {
+    margin-top: 50px;
+  
+  }
+
+  .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+    margin-bottom: 150px;
+}
+
 
   b {
     font-weight: 500;

@@ -23,8 +23,8 @@ export class SupportPage {
 
   ionViewDidEnter() {
     let toast = this.toastCtrl.create({
-      message: 'This does not actually send a support request.',
-      duration: 3000
+      message: 'Message goes nowhere',
+      duration: 2000
     });
     toast.present();
   }

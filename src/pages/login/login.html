@@ -1,5 +1,5 @@
 <ion-header>
-	<ion-navbar>
+	<ion-navbar color="skip">
 		<button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
@@ -9,14 +9,14 @@
 
 <ion-content>
 	<div class="logo">
-		<img src="assets/img/appicon.svg" alt="Ionic logo">
+		<img src="assets/icon/avatar.png" alt="Ionic logo">
 	</div>
-
+    <ion-card padding>
 	<form #loginForm="ngForm" novalidate>
 		<ion-list no-lines>
 			<ion-item>
 				<ion-label stacked color="primary">Username</ion-label>
-				<ion-input [(ngModel)]="login.username" name="username" type="text" #username="ngModel" spellcheck="false" autocapitalize="off"
+				<ion-input [(ngModel)]="login.username" clearInput="true" name="username" type="text" #username="ngModel" spellcheck="false" autocapitalize="off"
 					required>
 				</ion-input>
 			</ion-item>
@@ -26,22 +26,19 @@
 
 			<ion-item>
 				<ion-label stacked color="primary">Password</ion-label>
-				<ion-input [(ngModel)]="login.password" name="password" type="password" #password="ngModel" required>
+				<ion-input [(ngModel)]="login.password" clearInput="true" name="password" type="password" #password="ngModel" required>
 				</ion-input>
 			</ion-item>
 			<p ion-text [hidden]="password.valid || submitted == false" color="danger" padding-left>
 				Password is required
 			</p>
 		</ion-list>
-
-		<ion-row responsive-sm>
-			<ion-col>
-				<button ion-button (click)="onLogin(loginForm)" type="submit" block>Login</button>
-			</ion-col>
-			<ion-col>
-				<button ion-button (click)="onSignup()" color="light" block>Signup</button>
-			</ion-col>
-		</ion-row>
+		<div padding>
+			<button ion-button (click)="onLogin(loginForm)" type="submit" block color="skip">Login</button><br/>
+			<a>Forgot you password?</a>
+			<p>Don' have an account?<a (click)="onSignup()">Create one</a></p>
+		</div>
 	</form>
+	</ion-card>
 
 </ion-content>

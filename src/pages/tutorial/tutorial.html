@@ -1,42 +1,36 @@
-<ion-header no-border>
-  <ion-navbar>
-    <ion-buttons end *ngIf="showSkip">
-      <button ion-button (click)="startApp()" color="primary">Skip</button>
-    </ion-buttons>
-  </ion-navbar>
-</ion-header>
-
 <ion-content no-bounce>
   <ion-slides #slides (ionSlideWillChange)="onSlideChangeStart($event)" pager>
 
     <ion-slide>
       <img src="assets/img/ica-slidebox-img-1.png" class="slide-image"/>
       <h2 class="slide-title">
-        Welcome to <b>ICA</b>
+        <b>DISCOVER</b>
       </h2>
       <p>
-        The <b>ionic conference app</b> is a practical preview of the ionic framework in action, and a demonstration of proper code use.
+        Explore top products with best quality
       </p>
+      <ion-buttons end *ngIf="showSkip">
+      <button ion-button round (click)="startApp()" color="skip" class="button-ios1">Skip</button>
+    </ion-buttons>
     </ion-slide>
 
     <ion-slide>
       <img src="assets/img/ica-slidebox-img-2.png" class="slide-image"/>
-      <h2 class="slide-title" >What is Ionic?</h2>
-      <p><b>Ionic Framework</b> is an open source SDK that enables developers to build high quality mobile apps with web technologies like HTML, CSS, and JavaScript.</p>
-    </ion-slide>
-
-    <ion-slide>
-      <img src="assets/img/ica-slidebox-img-3.png" class="slide-image"/>
-      <h2 class="slide-title">What is Ionic Platform?</h2>
-      <p>The <b>Ionic Platform</b> is a cloud platform for managing and scaling Ionic apps with integrated services like push notifications, native builds, user auth, and live updating.</p>
+      <h2 class="slide-title" ><b>MAKE THE PAYMENT</b></h2>
+      <p>Choose the preferrable option for payment</p>
+      <ion-buttons end *ngIf="showSkip">
+      <button ion-button round center (click)="startApp()" color="skip" class="button-ios1">
+        Skip
+      </button>
+    </ion-buttons>
     </ion-slide>
 
     <ion-slide>
       <img src="assets/img/ica-slidebox-img-4.png" class="slide-image"/>
-      <h2 class="slide-title">Ready to Play?</h2>
-      <button ion-button icon-end large clear (click)="startApp()">
+      <h2 class="slide-title"><b>GET STARTED</b></h2>
+      <p>Get high quality products for the best prices</p>
+      <button ion-button round (click)="startApp()" color="skip" class="button-ios2" >
         Continue
-        <ion-icon name="arrow-forward"></ion-icon>
       </button>
     </ion-slide>
 

@@ -1,5 +1,5 @@
 <ion-header>
-	<ion-navbar>
+	<ion-navbar color="skip">
 		<button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
@@ -10,14 +10,14 @@
 <ion-content class="login-page">
 
 	<div class="logo">
-		<img src="assets/img/appicon.svg" alt="Ionic Logo">
+		<img src="assets/icon/avatar.png" alt="Ionic Logo" center>
 	</div>
 
 	<form #signupForm="ngForm" novalidate>
 		<ion-list no-lines>
 			<ion-item>
 				<ion-label stacked color="primary">Username</ion-label>
-				<ion-input [(ngModel)]="signup.username" name="username" type="text" #username="ngModel" required>
+				<ion-input [(ngModel)]="signup.username" name="username" type="text" #username="ngModel" required placeholder="Please enter a username">
 				</ion-input>
 			</ion-item>
 			<p ion-text [hidden]="username.valid || submitted == false" color="danger" padding-left>
@@ -26,7 +26,7 @@
 
 			<ion-item>
 				<ion-label stacked color="primary">Password</ion-label>
-				<ion-input [(ngModel)]="signup.password" name="password" type="password" #password="ngModel" required>
+				<ion-input [(ngModel)]="signup.password" name="password" type="password" #password="ngModel" required placeholder="Please enter a password">
 				</ion-input>
 			</ion-item>
 			<p ion-text [hidden]="password.valid || submitted == false" color="danger" padding-left>
@@ -35,8 +35,12 @@
 		</ion-list>
 
 		<div padding>
-			<button ion-button (click)="onSignup(signupForm)" type="submit" block>Create</button>
+			<button ion-button (click)="onSignup(signupForm)" type="submit" block color="skip">Signup as buyer</button>
+			<button ion-button (click)="onSignup(signupForm)" type="submit" block color="skip">Signup as seller</button>
 		</div>
 	</form>
+	<br/><br/>
+		<p> &nbsp;&nbsp;&nbsp;&nbsp;Interested in buying? <br/><br/><b> &nbsp;&nbsp;&nbsp;&nbsp;Signup as buyer</b><br/><br/></p>
+		<p> &nbsp;&nbsp;&nbsp;&nbsp;Interested in selling? <br/><br/>  <b>&nbsp;&nbsp;&nbsp;&nbsp;Signup as seller<br/><br/></b></p>	
 
 </ion-content>
