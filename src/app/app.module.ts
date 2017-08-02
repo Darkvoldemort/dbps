@@ -22,6 +22,11 @@ import { SpeakerDetailPage } from '../pages/speaker-detail/speaker-detail';
 import { SpeakerListPage } from '../pages/speaker-list/speaker-list';
 import { TabsPage } from '../pages/tabs-page/tabs-page';
 import { TutorialPage } from '../pages/tutorial/tutorial';
+import { HomePaintingFormPage } from '../pages/home-painting-form/home-painting-form';
+import { HomePlumbingFormPage } from '../pages/home-plumbing-form/home-plumbing-form';
+import { HomeRenovateFormPage } from '../pages/home-renovate-form/home-renovate-form';
+import { PaymentAndContactPage } from '../pages/payment-and-contact/payment-and-contact';
+import { SellerListPage } from '../pages/seller-list/seller-list';
 import { SupportPage } from '../pages/support/support';
 
 import { ConferenceData } from '../providers/conference-data';
@@ -42,7 +47,15 @@ import { UserData } from '../providers/user-data';
     SpeakerListPage,
     TabsPage,
     TutorialPage,
-    SupportPage
+    SupportPage,
+    HomePaintingFormPage,
+    HomePlumbingFormPage,
+    HomeRenovateFormPage,
+    PaymentAndContactPage,
+    SellerListPage
+
+
+
   ],
   imports: [
     BrowserModule,
@@ -59,7 +72,12 @@ import { UserData } from '../providers/user-data';
         { component: SupportPage, name: 'SupportPage', segment: 'support' },
         { component: LoginPage, name: 'LoginPage', segment: 'login' },
         { component: AccountPage, name: 'AccountPage', segment: 'account' },
-        { component: SignupPage, name: 'SignupPage', segment: 'signup' }
+        { component: SignupPage, name: 'SignupPage', segment: 'signup' },
+        { component: HomePaintingFormPage, name: 'HomePaintingFormPage', segment: 'HomePaintingFormPage' },
+        { component: HomePlumbingFormPage, name: 'HomePlumbingFormPage', segment: 'HomePlumbingFormPage' },
+        { component: HomeRenovateFormPage, name: 'HomeRenovateFormPage', segment: 'HomeRenovateFormPage' },
+        { component: PaymentAndContactPage, name: 'PaymentAndContactPage', segment: 'PaymentAndContactPage' },
+        { component: SellerListPage, name: 'SellerListPage', segment: 'SellerListPage' }
       ]
     }),
     IonicStorageModule.forRoot()
@@ -78,7 +96,12 @@ import { UserData } from '../providers/user-data';
     SpeakerListPage,
     TabsPage,
     TutorialPage,
-    SupportPage
+    SupportPage,
+    HomePaintingFormPage,
+    HomePlumbingFormPage,
+    HomeRenovateFormPage,
+    PaymentAndContactPage,
+    SellerListPage
   ],
   providers: [
     { provide: ErrorHandler, useClass: IonicErrorHandler },

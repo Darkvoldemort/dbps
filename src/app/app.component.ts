@@ -13,6 +13,11 @@ import { TutorialPage } from '../pages/tutorial/tutorial';
 import { SchedulePage } from '../pages/schedule/schedule';
 import { SpeakerListPage } from '../pages/speaker-list/speaker-list';
 import { SupportPage } from '../pages/support/support';
+import { HomePaintingFormPage } from '../pages/home-painting-form/home-painting-form';
+import { HomePlumbingFormPage } from '../pages/home-plumbing-form/home-plumbing-form';
+import { HomeRenovateFormPage } from '../pages/home-renovate-form/home-renovate-form';
+import { PaymentAndContactPage } from '../pages/payment-and-contact/payment-and-contact';
+import { SellerListPage } from '../pages/seller-list/seller-list';
 
 import { ConferenceData } from '../providers/conference-data';
 import { UserData } from '../providers/user-data';
@@ -41,7 +46,13 @@ export class ConferenceApp {
   // the login page disables the left menu
   appPages: PageInterface[] = [
     { title: 'Home', name: 'TabsPage', component: TabsPage, tabComponent: SchedulePage, index: 0, icon: 'home' },
-    { title: 'My Orders', name: 'TabsPage', component: TabsPage, tabComponent: SpeakerListPage, index: 1, icon: 'contacts' }
+    { title: 'My Orders', name: 'TabsPage', component: TabsPage, tabComponent: SpeakerListPage, index: 1, icon: 'contacts' },
+    { title: 'Painting Form', name: 'HomePaintingFormPage', component: HomePaintingFormPage, tabComponent: HomePaintingFormPage, index: 2, icon: 'contacts' },
+    { title: 'Plumbing Form', name: 'HomePlumbingFormPage', component: HomePlumbingFormPage, tabComponent: HomePlumbingFormPage, index: 3, icon: 'contacts' },
+    { title: 'HomeRenovateFormPage', name: 'HomeRenovateFormPage', component: HomeRenovateFormPage, tabComponent: HomeRenovateFormPage, index: 4, icon: 'contacts' },
+
+    { title: 'PaymentAndContactPage', name: 'PaymentAndContactPage', component: PaymentAndContactPage, tabComponent: PaymentAndContactPage, index: 5, icon: 'contacts' },
+    { title: 'SellerListPage', name: 'SellerListPage', component: SellerListPage, tabComponent: SellerListPage, index: 6, icon: 'contacts' }
   ];
   loggedInPages: PageInterface[] = [
     { title: 'Account', name: 'AccountPage', component: AccountPage, icon: 'person' },
