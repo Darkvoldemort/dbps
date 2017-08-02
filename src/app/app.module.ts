@@ -28,6 +28,7 @@ import { HomeRenovateFormPage } from '../pages/home-renovate-form/home-renovate-
 import { PaymentAndContactPage } from '../pages/payment-and-contact/payment-and-contact';
 import { SellerListPage } from '../pages/seller-list/seller-list';
 import { SupportPage } from '../pages/support/support';
+import { MapPage } from '../pages/map/map';
 
 import { ConferenceData } from '../providers/conference-data';
 import { UserData } from '../providers/user-data';
@@ -52,9 +53,8 @@ import { UserData } from '../providers/user-data';
     HomePlumbingFormPage,
     HomeRenovateFormPage,
     PaymentAndContactPage,
-    SellerListPage
-
-
+    SellerListPage,
+    MapPage
 
   ],
   imports: [
@@ -77,7 +77,8 @@ import { UserData } from '../providers/user-data';
         { component: HomePlumbingFormPage, name: 'HomePlumbingFormPage', segment: 'HomePlumbingFormPage' },
         { component: HomeRenovateFormPage, name: 'HomeRenovateFormPage', segment: 'HomeRenovateFormPage' },
         { component: PaymentAndContactPage, name: 'PaymentAndContactPage', segment: 'PaymentAndContactPage' },
-        { component: SellerListPage, name: 'SellerListPage', segment: 'SellerListPage' }
+        { component: SellerListPage, name: 'SellerListPage', segment: 'SellerListPage' },
+        { component: MapPage, name: 'map', segment: 'map' }
       ]
     }),
     IonicStorageModule.forRoot()
@@ -101,7 +102,9 @@ import { UserData } from '../providers/user-data';
     HomePlumbingFormPage,
     HomeRenovateFormPage,
     PaymentAndContactPage,
-    SellerListPage
+    SellerListPage,
+    MapPage
+
   ],
   providers: [
     { provide: ErrorHandler, useClass: IonicErrorHandler },

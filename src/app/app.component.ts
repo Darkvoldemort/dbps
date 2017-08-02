@@ -9,6 +9,7 @@ import { AccountPage } from '../pages/account/account';
 import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
 import { TabsPage } from '../pages/tabs-page/tabs-page';
+import { MapPage } from '../pages/map/map';
 import { TutorialPage } from '../pages/tutorial/tutorial';
 import { SchedulePage } from '../pages/schedule/schedule';
 import { SpeakerListPage } from '../pages/speaker-list/speaker-list';
@@ -62,7 +63,8 @@ export class ConferenceApp {
   loggedOutPages: PageInterface[] = [
     { title: 'Login', name: 'LoginPage', component: LoginPage, icon: 'log-in' },
     { title: 'Support', name: 'SupportPage', component: SupportPage, icon: 'help' },
-    { title: 'Signup', name: 'SignupPage', component: SignupPage, icon: 'person-add' }
+    { title: 'Signup', name: 'SignupPage', component: SignupPage, icon: 'person-add' },
+    { title: 'Map', name: 'TabsPage', component: TabsPage, tabComponent: MapPage, icon: 'map' },
   ];
   rootPage: any;
 
