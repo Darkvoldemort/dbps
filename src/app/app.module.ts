@@ -29,6 +29,7 @@ import { PaymentAndContactPage } from '../pages/payment-and-contact/payment-and-
 import { SellerListPage } from '../pages/seller-list/seller-list';
 import { SupportPage } from '../pages/support/support';
 import { MapPage } from '../pages/map/map';
+import { HomePage } from '../pages/home/home';
 
 import { ConferenceData } from '../providers/conference-data';
 import { UserData } from '../providers/user-data';
@@ -54,7 +55,8 @@ import { UserData } from '../providers/user-data';
     HomeRenovateFormPage,
     PaymentAndContactPage,
     SellerListPage,
-    MapPage
+    MapPage,
+    HomePage
 
   ],
   imports: [
@@ -78,7 +80,8 @@ import { UserData } from '../providers/user-data';
         { component: HomeRenovateFormPage, name: 'HomeRenovateFormPage', segment: 'HomeRenovateFormPage' },
         { component: PaymentAndContactPage, name: 'PaymentAndContactPage', segment: 'PaymentAndContactPage' },
         { component: SellerListPage, name: 'SellerListPage', segment: 'SellerListPage' },
-        { component: MapPage, name: 'map', segment: 'map' }
+        { component: MapPage, name: 'map', segment: 'map' },
+        { component: HomePage, name: 'HomePage', segment: 'HomePage' }
       ]
     }),
     IonicStorageModule.forRoot()
@@ -103,7 +106,8 @@ import { UserData } from '../providers/user-data';
     HomeRenovateFormPage,
     PaymentAndContactPage,
     SellerListPage,
-    MapPage
+    MapPage,
+    HomePage
 
   ],
   providers: [
@@ -111,7 +115,7 @@ import { UserData } from '../providers/user-data';
     ConferenceData,
     UserData,
     InAppBrowser,
-    SplashScreen
+    SplashScreen,
   ]
 })
 export class AppModule { }

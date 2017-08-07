@@ -1,0 +1,58 @@
+<ion-header>
+
+ 
+<ion-header>
+  <ion-navbar no-border-bottom color="skip">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+       <ion-searchbar color="primary"
+                   [(ngModel)]="queryText"
+                   (ionInput)="updateSchedule()"
+                   placeholder="Search products">
+    </ion-searchbar>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="presentFilter()">
+        <ion-icon ios="ios-options-outline" md="md-options"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header> 
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-refresher >
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <ion-card>
+    <img src="../../assets/img/home-renovation.jpg"/>
+     <ion-card-content>
+    <p>Home Renovations</p>
+     <p>15 Listings</p>
+  </ion-card-content>
+   
+  </ion-card>
+
+  <ion-card>
+    <img src="../../assets/img/home-construction.jpg"/>
+   <ion-card-content>
+    <p>Home Constructions</p>
+     <p>25 Listings</p>
+  </ion-card-content>
+   
+  </ion-card>
+  <ion-card>
+    <img src="../../assets/img/home-plumbing.jpg"/>
+   <ion-card-content>
+    <p>Home Plumbing</p>
+     <p>46 Listings</p>
+  </ion-card-content>
+   
+  </ion-card>
+
+
+</ion-content>

@@ -2,16 +2,16 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
 @Component({
-  selector: 'page-home-painting-form',
-  templateUrl: 'home-painting-form.html',
+  selector: 'page-home',
+  templateUrl: 'home.html',
 })
-export class HomePaintingFormPage {
+export class HomePage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad HomePaintingFormPage');
+    console.log('ionViewDidLoad HomePage');
   }
 
 }
