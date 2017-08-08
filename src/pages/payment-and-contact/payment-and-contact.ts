@@ -13,10 +13,51 @@ import { NavController, NavParams } from 'ionic-angular';
   templateUrl: 'payment-and-contact.html',
 })
 export class PaymentAndContactPage {
+    public  full: boolean ;
+    public  part: boolean ;
+    public  third:boolean ;
+    public text:string;
+
+      
+
+
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    
+  }
+  fullPayment(){
+   this.full = true;
+   this.part = false; 
+   this.third = false;
+   console.log(this.full);
+   console.log(this.part);
+   console.log(this.third);
   }
 
+  partialPay(){
+    this.part =true;
+    this.third = false;
+    this.full =false;
+    console.log(this.full);
+   console.log(this.part);
+   console.log(this.third);
+
+
+  }
+
+  thirdPay(){
+
+    this.part = false;
+    this.third = true;
+    this.full =false;
+    console.log(this.full);
+   console.log(this.part);
+   console.log(this.third);
+  }
+
+  changefirst(){
+    this.text = "30% for the total amount";
+  }
   ionViewDidLoad() {
     console.log('ionViewDidLoad PaymentAndContactPage');
   }

@@ -1,9 +1,3 @@
-<!--
-  Generated template for the PaymentAndContactPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
   <ion-navbar>
@@ -15,7 +9,78 @@
 
 </ion-header>
 
+<ion-content>
+	<ion-card>
+  <ion-card-header color="skip">
+    Payment Method
+  </ion-card-header>
 
-<ion-content padding>
+  <ion-list>
+    <div>
+      
+    <button ion-item (click) = "fullPayment()" >
+      <ion-icon name="arrow-dropdown-circle"></ion-icon>
+      Full Payment
+    </button>
+    <div *ngIf = full>
+      <ion-input type="text" value="Full payment will be made once the house is delivered"></ion-input>
+      <button ion-button type="round">Accept</button>
+      <button ion-button type="round">Reject</button>
+    </div>
+    </div>
+   <div >
+    <button ion-item (click) = "partialPay()" >
+      <ion-icon name="arrow-dropdown-circle"></ion-icon>
+      Partial Payment
+    </button>
+    <div *ngIf = part>
 
+      <h2>Ground Floor completion</h2>
+       <ion-input type="text" value="{{amount}}"></ion-input>
+         <ion-item>
+              <ion-label>Amount to be paid</ion-label>
+              <ion-select [(ngModel)]="amountg">
+              <ion-option value="fg">20% of the total amount</ion-option>
+              <ion-option value="mg">10% of the total amount</ion-option>
+              <ion-option value="ng">40% of the total amount</ion-option>
+              </ion-select>
+         </ion-item>
+  
+      <h2>First Floor completion</h2>
+          <ion-item>
+              <ion-label>Amount to be paid</ion-label>
+              <ion-select [(ngModel)]="amount1">
+              <ion-option value="f1">20% of the total amount</ion-option>
+              <ion-option value="m1">10% of the total amount</ion-option>
+              <ion-option value="n1">40% of the total amount</ion-option>
+              </ion-select>
+         </ion-item>     
+      <h2>Second Floor completion</h2>
+      
+         <ion-item>
+              <ion-label>Amount to be paid</ion-label>
+              <ion-select [(ngModel)]="amount2">
+              <ion-option value="f2">20% of the total amount</ion-option>
+              <ion-option value="m2">10% of the total amount</ion-option>
+              <ion-option value="n2">40% of the total amount</ion-option>
+              </ion-select>
+         </ion-item>  
+      <button ion-button type="round">Accept</button>
+      <button ion-button type="round">Edit</button>
+    </div>  
+   </div>
+   <div >
+    <button ion-item (click) = "thirdPay()">
+      <ion-icon name="arrow-dropdown-circle"></ion-icon>
+      Third Party Payment
+    </button>
+    <div *ngIf = third>
+      <h2>Third party Payment</h2>
+      <button ion-button type="round">Accept</button>
+      <button ion-button type="round">Reject</button>
+    </div>  
+   </div>
+
+ </ion-list>
+</ion-card>
 </ion-content>
