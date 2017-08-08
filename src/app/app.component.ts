@@ -19,6 +19,7 @@ import { HomePlumbingFormPage } from '../pages/home-plumbing-form/home-plumbing-
 import { HomeRenovateFormPage } from '../pages/home-renovate-form/home-renovate-form';
 import { PaymentAndContactPage } from '../pages/payment-and-contact/payment-and-contact';
 import { SellerListPage } from '../pages/seller-list/seller-list';
+import { HomePage } from '../pages/home/home';
 
 import { ConferenceData } from '../providers/conference-data';
 import { UserData } from '../providers/user-data';
@@ -48,12 +49,12 @@ export class ConferenceApp {
   appPages: PageInterface[] = [
     { title: 'Home', name: 'TabsPage', component: TabsPage, tabComponent: SchedulePage, index: 0, icon: 'home' },
     { title: 'My Orders', name: 'TabsPage', component: TabsPage, tabComponent: SpeakerListPage, index: 1, icon: 'contacts' },
-    { title: 'Painting Form', name: 'HomePaintingFormPage', component: HomePaintingFormPage, tabComponent: HomePaintingFormPage, index: 2, icon: 'contacts' },
-    { title: 'Plumbing Form', name: 'HomePlumbingFormPage', component: HomePlumbingFormPage, tabComponent: HomePlumbingFormPage, index: 3, icon: 'contacts' },
-    { title: 'HomeRenovateFormPage', name: 'HomeRenovateFormPage', component: HomeRenovateFormPage, tabComponent: HomeRenovateFormPage, index: 4, icon: 'contacts' },
-
-    { title: 'PaymentAndContactPage', name: 'PaymentAndContactPage', component: PaymentAndContactPage, tabComponent: PaymentAndContactPage, index: 5, icon: 'contacts' },
-    { title: 'SellerListPage', name: 'SellerListPage', component: SellerListPage, tabComponent: SellerListPage, index: 6, icon: 'contacts' }
+    { title: 'Chat History', name: 'HomePaintingFormPage', component: HomePaintingFormPage, tabComponent: HomePaintingFormPage, index: 2, icon: 'alert' },
+    { title: 'Agreement', name: 'HomePlumbingFormPage', component: HomePlumbingFormPage, tabComponent: HomePlumbingFormPage, index: 3, icon: 'albums' },
+    { title: 'Payment History', name: 'HomeRenovateFormPage', component: HomeRenovateFormPage, tabComponent: HomeRenovateFormPage, index: 4, icon: 'alarm' },
+    { title: 'Track Progress', name: 'PaymentAndContactPage', component: PaymentAndContactPage, tabComponent: PaymentAndContactPage, index: 5, icon: 'american-football' },
+    { title: 'Seller', name: 'SellerListPage', component: SellerListPage, tabComponent: SellerListPage, index: 6, icon: 'contacts' },
+    { title: 'Home', name: 'HomePage', component: HomePage, tabComponent: HomePage, index: 7, icon: 'home' }
   ];
   loggedInPages: PageInterface[] = [
     { title: 'Account', name: 'AccountPage', component: AccountPage, icon: 'person' },

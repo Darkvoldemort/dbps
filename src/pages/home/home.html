@@ -1,0 +1,114 @@
+<ion-header>
+
+ 
+<ion-header>
+  <ion-navbar no-border-bottom color="skip">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+       <ion-searchbar color="primary"
+                   [(ngModel)]="queryText"
+                   (ionInput)="updateSchedule()"
+                   placeholder="Search products">
+    </ion-searchbar>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="presentFilter()">
+        <ion-icon ios="ios-options-outline" md="md-options"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header> 
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  
+  <ion-card>
+
+    <img src="../../assets/img/home-renovation.jpg"/>
+
+    <ion-card-content>
+     <button ion-button block color="dark" (click)="doCheckbox1()">Submit Requirements</button>
+      <ion-card-title>
+        Home Renovations
+      </ion-card-title>
+      <p>
+        Get your home renovated and feel the blend of modernity with fashion.
+      </p>
+    </ion-card-content>
+
+    <ion-item>
+      <ion-icon name='laptop' item-start style="color: #d03e84"></ion-icon>
+      Contractors
+      <ion-badge item-end>90</ion-badge>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name='hammer' item-start style="color: #55acee"></ion-icon>
+      Sellers
+      <ion-badge item-end>25</ion-badge>
+    </ion-item>
+
+  </ion-card>
+  <ion-card>
+
+    <img src="../../assets/img/home-construction.jpg"/>
+
+    <ion-card-content>
+      <button ion-button block color="dark" (click)="doCheckbox2()">Submit Requirements</button>
+      <ion-card-title>
+        Home Constructions
+      </ion-card-title>
+      <p>
+        Get your dream home in liberty of your budget.
+      </p>
+    </ion-card-content>
+
+    <ion-item>
+      <ion-icon name='laptop' item-start style="color: #d03e84"></ion-icon>
+      Contractors
+      <ion-badge item-end>22</ion-badge>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name='hammer' item-start style="color: #55acee"></ion-icon>
+      Sellers
+      <ion-badge item-end>16</ion-badge>
+    </ion-item>
+
+  </ion-card>
+
+   <ion-card>
+
+    <img src="../../assets/img/home-plumbing.jpg"/>
+
+    <ion-card-content>
+      <button ion-button block color="dark" (click)="doCheckbox3()">Submit Requirements</button>
+      <ion-card-title>
+        Home Plumbing
+      </ion-card-title>
+      <p>
+        Get your water flowing in the right direction.
+      </p>
+    </ion-card-content>
+
+    <ion-item>
+      <ion-icon name='laptop' item-start style="color: #d03e84"></ion-icon>
+      Contractors
+      <ion-badge item-end>08</ion-badge>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name='hammer' item-start style="color: #55acee"></ion-icon>
+      Sellers
+      <ion-badge item-end>31</ion-badge>
+    </ion-item>
+
+  </ion-card>
+
+</ion-content>

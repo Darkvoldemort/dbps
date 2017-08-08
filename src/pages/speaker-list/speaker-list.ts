@@ -13,6 +13,7 @@ import { ConferenceData } from '../../providers/conference-data';
 
 import { SessionDetailPage } from '../session-detail/session-detail';
 import { SpeakerDetailPage } from '../speaker-detail/speaker-detail';
+import { MapPage } from "../map/map";
 
 // TODO remove
 export interface ActionSheetButton {
@@ -58,6 +59,10 @@ export class SpeakerListPage {
       `https://twitter.com/${speaker.twitter}`,
       '_blank'
     );
+  }
+  goToMap(){
+     this.navCtrl.push(MapPage);
+
   }
 
   openSpeakerShare(speaker: any) {
