@@ -9,12 +9,18 @@
 
 </ion-header>
 
+
+
 <ion-content>
 	<ion-card>
-  <ion-card-header color="skip">
-    Payment Method
-  </ion-card-header>
-
+      <ion-item>
+      <ion-label>Payment Method</ion-label>
+      <ion-select [(ngModel)]="PayMeth">
+      <ion-option value="fm">Net Banking</ion-option>
+      <ion-option value="mm">Mobile Pay</ion-option>
+      </ion-select>
+      </ion-item>
+ 
   <ion-list>
     <div>
       
@@ -34,39 +40,47 @@
       Partial Payment
     </button>
     <div *ngIf = part>
-
-      <h2>Ground Floor completion</h2>
-       <ion-input type="text" value="{{amount}}"></ion-input>
-         <ion-item>
-              <ion-label>Amount to be paid</ion-label>
-              <ion-select [(ngModel)]="amountg">
-              <ion-option value="fg">20% of the total amount</ion-option>
-              <ion-option value="mg">10% of the total amount</ion-option>
-              <ion-option value="ng">40% of the total amount</ion-option>
-              </ion-select>
-         </ion-item>
-  
-      <h2>First Floor completion</h2>
-          <ion-item>
-              <ion-label>Amount to be paid</ion-label>
-              <ion-select [(ngModel)]="amount1">
-              <ion-option value="f1">20% of the total amount</ion-option>
-              <ion-option value="m1">10% of the total amount</ion-option>
-              <ion-option value="n1">40% of the total amount</ion-option>
-              </ion-select>
-         </ion-item>     
-      <h2>Second Floor completion</h2>
-      
-         <ion-item>
-              <ion-label>Amount to be paid</ion-label>
-              <ion-select [(ngModel)]="amount2">
-              <ion-option value="f2">20% of the total amount</ion-option>
-              <ion-option value="m2">10% of the total amount</ion-option>
-              <ion-option value="n2">40% of the total amount</ion-option>
-              </ion-select>
-         </ion-item>  
-      <button ion-button type="round">Accept</button>
-      <button ion-button type="round">Edit</button>
+  <ion-grid>
+  <ion-row>
+    <ion-col width-50>
+      <ion-item class="custom-item-input">
+        <ion-label>Condition</ion-label>
+      </ion-item>
+    </ion-col>
+    <ion-col width-50>
+      <ion-item>
+        <ion-label>% of Payment</ion-label>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+   <ion-row *ngFor=" let choice of choices , let i = index">
+    <ion-col width-50>
+      <ion-item class="item" item-width="50">
+        <ion-input type="text" [(ngModel)]="choice[i]"></ion-input>
+      </ion-item>
+    </ion-col>
+    <ion-col width-50>
+      <ion-item>
+          <ion-select [(ngModel)]="choice[i]">
+          <ion-option >10%</ion-option>
+          <ion-option >20%</ion-option>
+          <ion-option >30%</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+<div>
+<button  ion-button color="light" icon-right (click)="addInputField()">
+  Add Condition
+  <ion-icon name="add"></ion-icon>
+</button>
+   <div id="choicesDisplay">
+      {{ choices }}
+   </div>
+</div>
+   <button ion-button type="round">Accept</button>
+   <button ion-button type="round">Edit</button>
     </div>  
    </div>
    <div >
@@ -82,5 +96,7 @@
    </div>
 
  </ion-list>
-</ion-card>
+
+ </ion-card>
+
 </ion-content>

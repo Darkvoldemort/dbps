@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
+
 /**
  * Generated class for the PaymentAndContactPage page.
  *
@@ -17,7 +18,9 @@ export class PaymentAndContactPage {
     public  part: boolean ;
     public  third:boolean ;
     public text:string;
-
+    public choices:any[] =[];
+    public itenno:number;
+    
       
 
 
@@ -25,6 +28,7 @@ export class PaymentAndContactPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     
   }
+  
   fullPayment(){
    this.full = true;
    this.part = false; 
@@ -55,11 +59,15 @@ export class PaymentAndContactPage {
    console.log(this.third);
   }
 
-  changefirst(){
-    this.text = "30% for the total amount";
+  addInputField(){
+     this.choices.push('');
+    
   }
+
   ionViewDidLoad() {
+    
     console.log('ionViewDidLoad PaymentAndContactPage');
   }
 
+  
 }
