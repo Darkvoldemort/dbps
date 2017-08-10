@@ -30,6 +30,11 @@ import { SellerListPage } from '../pages/seller-list/seller-list';
 import { SupportPage } from '../pages/support/support';
 import { MapPage } from '../pages/map/map';
 import { HomePage } from '../pages/home/home';
+import { PaymentPage} from '../pages/payment/payment';
+import { ConfirmpayPage } from '../pages/confirmpay/confirmpay';
+import { DealsummaryPage } from '../pages/dealsummary/dealsummary';
+import{AgreementPage } from  '../pages/agreement/agreement'
+import{StatusPage } from  '../pages/status/status'
 
 import { ConferenceData } from '../providers/conference-data';
 import { UserData } from '../providers/user-data';
@@ -56,7 +61,12 @@ import { UserData } from '../providers/user-data';
     PaymentAndContactPage,
     SellerListPage,
     MapPage,
-    HomePage
+    HomePage,
+    PaymentPage,
+    ConfirmpayPage,
+    DealsummaryPage,
+    AgreementPage,
+    StatusPage
 
   ],
   imports: [
@@ -107,7 +117,12 @@ import { UserData } from '../providers/user-data';
     PaymentAndContactPage,
     SellerListPage,
     MapPage,
-    HomePage
+    HomePage,
+    PaymentPage,
+    ConfirmpayPage,
+    DealsummaryPage,
+    AgreementPage,
+    StatusPage
 
   ],
   providers: [

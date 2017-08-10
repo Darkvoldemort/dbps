@@ -8,9 +8,6 @@
   </ion-navbar>
 
 </ion-header>
-
-
-
 <ion-content>
 	<ion-card>
       <ion-item>
@@ -30,7 +27,7 @@
     </button>
     <div *ngIf = full>
       <ion-input type="text" value="Full payment will be made once the house is delivered"></ion-input>
-      <button ion-button type="round">Accept</button>
+      <button ion-button type="round" (click)="opneSchd()">Accept</button>
       <button ion-button type="round">Reject</button>
     </div>
     </div>
@@ -75,11 +72,8 @@
   Add Condition
   <ion-icon name="add"></ion-icon>
 </button>
-   <div id="choicesDisplay">
-      {{ choices }}
-   </div>
 </div>
-   <button ion-button type="round">Accept</button>
+   <button ion-button type="round" (click)="opneSchd()">Accept</button>
    <button ion-button type="round">Edit</button>
     </div>  
    </div>
@@ -90,7 +84,7 @@
     </button>
     <div *ngIf = third>
       <h2>Third party Payment</h2>
-      <button ion-button type="round">Accept</button>
+      <button ion-button type="round" (click)="opneSchd()" >Accept</button>
       <button ion-button type="round">Reject</button>
     </div>  
    </div>
@@ -98,5 +92,74 @@
  </ion-list>
 
  </ion-card>
-
+<ion-card>
+      <ion-item>
+      <ion-label>Schedule</ion-label>
+      </ion-item>
+  <ion-list>
+  <div >
+    <button ion-item (click) = "schedulePay()" >
+      <ion-icon name="arrow-dropdown-circle"></ion-icon>
+      Partial Payment
+    </button>
+  <div *ngIf = opsch>
+  <ion-grid no-padding>
+  <ion-row >
+    <ion-col >
+      <ion-item class ="item-sm">
+        <ion-label class="label label-sm">Condition</ion-label>
+      </ion-item>
+    </ion-col>
+    <ion-col >
+      <ion-item class ="item-sm"> 
+        <ion-label class="label label-sm">Amount</ion-label>
+      </ion-item>
+    </ion-col>
+    <ion-col >
+      <ion-item >
+        <ion-label class="label label-sm">Currency</ion-label>
+      </ion-item>
+    </ion-col>
+    <ion-col>
+      <ion-item>
+        <ion-label class="label label-sm">Due date</ion-label>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+   <ion-row *ngFor=" let schd of schds , let i = index">
+    <ion-col >
+      <ion-item class="item">
+        <ion-input type="text" [(ngModel)]="schd[i]"></ion-input>
+      </ion-item>
+    </ion-col>
+    <ion-col >
+      <ion-item>
+          <ion-input type="text" [(ngModel)]="schd[i]"></ion-input>
+      </ion-item>
+    </ion-col>
+    <ion-col >
+      <ion-item class="item">
+        <ion-input type="text" [(ngModel)]="schd[i]"></ion-input>
+      </ion-item>
+    </ion-col>
+    <ion-col>
+      <ion-item>
+          <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="schd[1]"></ion-datetime>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+<div>
+<button  ion-button color="light" icon-right (click)="addschedule()">
+  Add Condition
+  <ion-icon name="add"></ion-icon>
+</button>
+</div>
+ <div>      
+<button ion-button type="round" (click)="summary()">Accept</button>
+ </div>
+</div>  
+</div>
+</ion-list>
+</ion-card>
 </ion-content>

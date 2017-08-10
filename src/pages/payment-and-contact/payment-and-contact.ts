@@ -1,13 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-
-
-/**
- * Generated class for the PaymentAndContactPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
+import { DealsummaryPage } from '../dealsummary/dealsummary';
 
 @Component({
   selector: 'page-payment-and-contact',
@@ -20,31 +13,30 @@ export class PaymentAndContactPage {
     public text:string;
     public choices:any[] =[];
     public itenno:number;
+    public schds:any[]=[];
+    public opsch:boolean;
     
       
 
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-    
-  }
+  constructor(public navCtrl: NavController, 
+    public navParams: NavParams
+    // public datePicker: DatePicker
+  ) { }
   
   fullPayment(){
    this.full = true;
    this.part = false; 
    this.third = false;
-   console.log(this.full);
-   console.log(this.part);
-   console.log(this.third);
+   this.opsch =false;
   }
 
   partialPay(){
     this.part =true;
     this.third = false;
     this.full =false;
-    console.log(this.full);
-   console.log(this.part);
-   console.log(this.third);
+    this.opsch =false;
 
 
   }
@@ -54,15 +46,37 @@ export class PaymentAndContactPage {
     this.part = false;
     this.third = true;
     this.full =false;
-    console.log(this.full);
-   console.log(this.part);
-   console.log(this.third);
+    this.opsch =false;
   }
 
   addInputField(){
      this.choices.push('');
-    
+      
   }
+  opneSchd()
+  {
+    this.part = false;
+    this.third = false;
+    this.full =false;
+    this.opsch=true;
+
+  }
+  schedulePay()
+  {
+   
+  }
+
+  addschedule()
+  {
+   this.schds.push('');
+  }
+
+summary(){
+  this.navCtrl.push(DealsummaryPage);
+
+}
+
+
 
   ionViewDidLoad() {
     

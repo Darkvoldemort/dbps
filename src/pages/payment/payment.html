@@ -1,0 +1,24 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Payment</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  	<ion-card>
+      <ion-item>
+      <ion-label>Payment Method</ion-label>
+      <ion-select [(ngModel)]="PayMeth">
+      <ion-option value="fm">Direct Debit</ion-option>
+      <ion-option value="mm">Mobile Pay</ion-option>
+      <ion-option value="mm">TFG</ion-option>
+      <ion-option value="mm">SCF</ion-option>
+      <ion-option value="mm">Dynamic pay</ion-option>
+      </ion-select>
+      </ion-item>
+  	</ion-card>
+<button ion-button type="round" (click)="confirmpay()">Pay</button>
+</ion-content>
