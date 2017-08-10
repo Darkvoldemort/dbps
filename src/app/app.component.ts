@@ -9,14 +9,14 @@ import { AccountPage } from '../pages/account/account';
 import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
 import { TabsPage } from '../pages/tabs-page/tabs-page';
-import { MapPage } from '../pages/map/map';
+//import { MapPage } from '../pages/map/map';
 import { TutorialPage } from '../pages/tutorial/tutorial';
 import { SchedulePage } from '../pages/schedule/schedule';
-import { SpeakerListPage } from '../pages/speaker-list/speaker-list';
+//import { SpeakerListPage } from '../pages/speaker-list/speaker-list';
 import { SupportPage } from '../pages/support/support';
-import { HomePaintingFormPage } from '../pages/home-painting-form/home-painting-form';
-import { HomePlumbingFormPage } from '../pages/home-plumbing-form/home-plumbing-form';
-import { HomeRenovateFormPage } from '../pages/home-renovate-form/home-renovate-form';
+//import { HomePaintingFormPage } from '../pages/home-painting-form/home-painting-form';
+//import { HomePlumbingFormPage } from '../pages/home-plumbing-form/home-plumbing-form';
+//import { HomeRenovateFormPage } from '../pages/home-renovate-form/home-renovate-form';
 import { PaymentAndContactPage } from '../pages/payment-and-contact/payment-and-contact';
 import { SellerListPage } from '../pages/seller-list/seller-list';
 import { HomePage } from '../pages/home/home';
@@ -47,25 +47,26 @@ export class ConferenceApp {
   // the left menu only works after login
   // the login page disables the left menu
   appPages: PageInterface[] = [
-    { title: 'Home', name: 'TabsPage', component: TabsPage, tabComponent: SchedulePage, index: 0, icon: 'home' },
-    { title: 'My Orders', name: 'TabsPage', component: TabsPage, tabComponent: SpeakerListPage, index: 1, icon: 'contacts' },
-    { title: 'Chat History', name: 'HomePaintingFormPage', component: HomePaintingFormPage, tabComponent: HomePaintingFormPage, index: 2, icon: 'alert' },
-    { title: 'Agreement', name: 'HomePlumbingFormPage', component: HomePlumbingFormPage, tabComponent: HomePlumbingFormPage, index: 3, icon: 'albums' },
-    { title: 'Payment History', name: 'HomeRenovateFormPage', component: HomeRenovateFormPage, tabComponent: HomeRenovateFormPage, index: 4, icon: 'alarm' },
-    { title: 'Track Progress', name: 'PaymentAndContactPage', component: PaymentAndContactPage, tabComponent: PaymentAndContactPage, index: 5, icon: 'american-football' },
-    { title: 'Seller', name: 'SellerListPage', component: SellerListPage, tabComponent: SellerListPage, index: 6, icon: 'contacts' },
-    { title: 'Home', name: 'HomePage', component: HomePage, tabComponent: HomePage, index: 7, icon: 'home' }
+    { title: 'Home', name: 'HomePage', component: HomePage, tabComponent: HomePage, index: 0, icon: 'home' },
+    { title: 'Seller Listings', name: 'TabsPage', component: TabsPage, tabComponent: SchedulePage, index: 1, icon: 'home' },
+   
+    
   ];
   loggedInPages: PageInterface[] = [
     { title: 'Account', name: 'AccountPage', component: AccountPage, icon: 'person' },
     { title: 'Support', name: 'SupportPage', component: SupportPage, icon: 'help' },
-    { title: 'Logout', name: 'TabsPage', component: TabsPage, icon: 'log-out', logsOut: true }
+    { title: 'Logout', name: 'TabsPage', component: TabsPage, icon: 'log-out', logsOut: true },
+    { title: 'Payment Agreement', name: 'PaymentAndContactPage', component: PaymentAndContactPage,  icon: 'american-football' },
+    { title: 'Negotiation Corner', name: 'SellerListPage', component: SellerListPage, icon: 'contacts' }
   ];
   loggedOutPages: PageInterface[] = [
     { title: 'Login', name: 'LoginPage', component: LoginPage, icon: 'log-in' },
     { title: 'Support', name: 'SupportPage', component: SupportPage, icon: 'help' },
     { title: 'Signup', name: 'SignupPage', component: SignupPage, icon: 'person-add' },
-    { title: 'Map', name: 'TabsPage', component: TabsPage, tabComponent: MapPage, icon: 'map' },
+    { title: 'Map', name: 'TabsPage', component: TabsPage,  icon: 'map' },
+  
+   
+    
   ];
   rootPage: any;
 

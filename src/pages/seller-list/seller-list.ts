@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { AlertController } from 'ionic-angular';
 
 /**
  * Generated class for the SellerListPage page.
@@ -13,12 +14,22 @@ import { NavController, NavParams } from 'ionic-angular';
   templateUrl: 'seller-list.html',
 })
 export class SellerListPage {
+  
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,public alertCtrl: AlertController) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SellerListPage');
   }
+  getwords() {
+  let alert = this.alertCtrl.create({
+      title: 'Comments Updated',
+      subTitle: 'Your Comments have been updated and the seller notified',
+      buttons:['OK']
+    });
+    alert.present();
+    
+}
 
 }

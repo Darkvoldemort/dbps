@@ -22,6 +22,16 @@ export class HomePage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad HomePage');
   }
+  presentFilter(){
+
+    let alert = this.alertCtrl.create({
+      title: 'Oops Sorry',
+      subTitle: 'Filtering is unavailable at the moment',
+      buttons:['OK']
+    });
+    alert.present();
+    
+  }
   doCheckbox1() {
     let alert = this.alertCtrl.create();
     alert.setTitle('Which parts do you want renovated?');
