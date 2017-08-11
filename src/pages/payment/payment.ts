@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 // import { ConfirmpayPage } from '../confirmpay/confirmpay';
 import { AlertController } from 'ionic-angular';
+import {HomePage} from '../home/home';
 
 
 
@@ -25,6 +26,7 @@ confirmpay(){
     });
     alert.present();
   }
+  this.navCtrl.push(HomePage);
 
 }
   ionViewDidLoad() {

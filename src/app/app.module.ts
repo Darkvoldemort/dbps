@@ -33,8 +33,9 @@ import { HomePage } from '../pages/home/home';
 import { PaymentPage} from '../pages/payment/payment';
 import { ConfirmpayPage } from '../pages/confirmpay/confirmpay';
 import { DealsummaryPage } from '../pages/dealsummary/dealsummary';
-import{AgreementPage } from  '../pages/agreement/agreement'
-import{StatusPage } from  '../pages/status/status'
+import{ AgreementPage } from  '../pages/agreement/agreement'
+import{ StatusPage } from  '../pages/status/status'
+import { RequirementPage } from '../pages/requirement/requirement';
 
 import { ConferenceData } from '../providers/conference-data';
 import { UserData } from '../providers/user-data';
@@ -66,7 +67,8 @@ import { UserData } from '../providers/user-data';
     ConfirmpayPage,
     DealsummaryPage,
     AgreementPage,
-    StatusPage
+    StatusPage,
+    RequirementPage
 
   ],
   imports: [
@@ -89,6 +91,8 @@ import { UserData } from '../providers/user-data';
         { component: HomePlumbingFormPage, name: 'HomePlumbingFormPage', segment: 'HomePlumbingFormPage' },
         { component: HomeRenovateFormPage, name: 'HomeRenovateFormPage', segment: 'HomeRenovateFormPage' },
         { component: PaymentAndContactPage, name: 'PaymentAndContactPage', segment: 'PaymentAndContactPage' },
+        { component: RequirementPage, name: 'RequirementPage', segment: 'RequirementPage' },
+        { component: StatusPage, name: 'StatusPage', segment: 'StatusPage' },
         { component: SellerListPage, name: 'SellerListPage', segment: 'SellerListPage' },
         { component: MapPage, name: 'map', segment: 'map' },
         { component: HomePage, name: 'HomePage', segment: 'HomePage' }
@@ -122,7 +126,8 @@ import { UserData } from '../providers/user-data';
     ConfirmpayPage,
     DealsummaryPage,
     AgreementPage,
-    StatusPage
+    StatusPage,
+    RequirementPage
 
   ],
   providers: [

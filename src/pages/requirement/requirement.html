@@ -1,0 +1,106 @@
+<!--
+  Generated template for the RequirementPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+    <ion-icon name="Requirement"></ion-icon>
+    </button>
+    <ion-title>Requirement</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card>
+      <h2 padding>Please select the type of project</h2>
+      <ion-item>
+      <ion-label>Type of project</ion-label>
+      <ion-select [(ngModel)]="project">
+      <ion-option value="fm">New construction</ion-option>
+      <ion-option value="mm">Renovation</ion-option>
+      </ion-select>
+      </ion-item>
+      <button ion-button type="round" (click)="onproject()">Next</button>
+  </ion-card>
+  <ion-card *ngIf = kind>
+    <h2  padding>Kind of space you need to get renevoted</h2> 
+    <ion-item>
+  
+      <ion-label>Kind of space</ion-label>
+      <ion-select [(ngModel)]="kind">
+      <ion-option value="f1">household</ion-option>
+      <ion-option value="m1">Office</ion-option>
+      <ion-option value="r1">Retail space(Shop/Showroom)</ion-option>
+      <ion-option value="h1">Hospitality(Restaurant/cafe/hotel)</ion-option>
+      </ion-select>
+      </ion-item>
+       <button ion-button type="round" (click)="onkindok()">Next</button>
+  </ion-card>
+  <ion-card *ngIf = size >
+    <h2  padding>Size of house</h2>
+    <ion-item>
+        
+      <ion-label>Size</ion-label>
+      <ion-select [(ngModel)]="house">
+      <ion-option value="fm">1 BHK</ion-option>
+      <ion-option value="mm">2 BHK</ion-option>
+      <ion-option value="f3">3 BHK</ion-option>
+      <ion-option value="m4">More than 4 BHK</ion-option>
+      </ion-select>
+      </ion-item>
+     <button ion-button type="round" (click)="onsize()">Next</button>
+      
+  </ion-card>
+   <ion-card *ngIf = type>
+     <h2  padding>Renovation rooms</h2>
+  <ion-list>
+
+  <ion-item>
+    
+    <ion-label>Bedroom(s)</ion-label>
+    <ion-checkbox [(ngModel)]="bedroom"></ion-checkbox>
+    </ion-item>
+    <ion-item>
+    <ion-label>Living room</ion-label>
+    <ion-checkbox [(ngModel)]="livingroom"></ion-checkbox>
+    </ion-item>
+    <ion-item>
+    <ion-label>Dinning</ion-label>
+    <ion-checkbox [(ngModel)]="dinning"></ion-checkbox>
+    </ion-item>
+    <ion-item>
+    <ion-label>Kitchen(s)</ion-label>
+    <ion-checkbox [(ngModel)]="kitchen"></ion-checkbox>
+    </ion-item>
+    <ion-item>
+    <ion-label>Bathroom</ion-label>
+    <ion-checkbox [(ngModel)]="bathroom"></ion-checkbox>
+    </ion-item>
+    <ion-item>
+    <ion-label>other area or space</ion-label>
+    <ion-checkbox [(ngModel)]="other"></ion-checkbox>
+    </ion-item>
+
+   </ion-list>
+  <button ion-button type="round" (click)="ontype()">Next</button>
+  </ion-card>
+  <ion-card *ngIf = budget>
+    <h2  padding>Please choose your budget</h2>
+      <ion-item>
+        
+      <ion-label>Budget</ion-label>
+      <ion-select [(ngModel)]="PayMeth">
+      <ion-option value="fm">DKK 10000 - 30000</ion-option>
+      <ion-option value="mm">DKK 30000 - 60000</ion-option>
+      <ion-option value="fm">DKK 60000 - 90000</ion-option>
+      </ion-select>
+      </ion-item>
+    <button ion-button type="round" (click)="onbudget()">Next</button>
+  </ion-card>
+</ion-content>

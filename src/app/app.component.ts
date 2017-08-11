@@ -23,6 +23,8 @@ import { HomePage } from '../pages/home/home';
 
 import { ConferenceData } from '../providers/conference-data';
 import { UserData } from '../providers/user-data';
+import { RequirementPage } from '../pages/requirement/requirement';
+import { StatusPage } from '../pages/status/status';
 
 export interface PageInterface {
   title: string;
@@ -56,8 +58,10 @@ export class ConferenceApp {
     { title: 'Account', name: 'AccountPage', component: AccountPage, icon: 'person' },
     { title: 'Support', name: 'SupportPage', component: SupportPage, icon: 'help' },
     { title: 'Logout', name: 'TabsPage', component: TabsPage, icon: 'log-out', logsOut: true },
+    { title: 'Requirement ', name: 'RequirementPage', component: RequirementPage,  icon: 'book' },
     { title: 'Payment Agreement', name: 'PaymentAndContactPage', component: PaymentAndContactPage,  icon: 'american-football' },
-    { title: 'Negotiation Corner', name: 'SellerListPage', component: SellerListPage, icon: 'contacts' }
+    { title: 'Negotiation Corner', name: 'SellerListPage', component: SellerListPage, icon: 'cash' },
+    { title: 'Status', name: 'StatusPage', component: StatusPage, icon: 'contacts' }
   ];
   loggedOutPages: PageInterface[] = [
     { title: 'Login', name: 'LoginPage', component: LoginPage, icon: 'log-in' },

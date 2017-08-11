@@ -4,23 +4,14 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>PaymentAndContact</ion-title>
+    <ion-title>Payment Mode</ion-title>
   </ion-navbar>
 
 </ion-header>
 <ion-content>
 	<ion-card>
-      <ion-item>
-      <ion-label>Payment Method</ion-label>
-      <ion-select [(ngModel)]="PayMeth">
-      <ion-option value="fm">Net Banking</ion-option>
-      <ion-option value="mm">Mobile Pay</ion-option>
-      </ion-select>
-      </ion-item>
- 
-  <ion-list>
-    <div>
-      
+<ion-list>
+    <div>      
     <button ion-item (click) = "fullPayment()" >
       <ion-icon name="arrow-dropdown-circle"></ion-icon>
       Full Payment
