@@ -1,3 +1,67 @@
 page-status {
 
 }
+
+ul {
+  padding: 0px;
+
+  &.rating li {
+    padding: 5px 10px !important;
+    background: none;
+    color: #ffb400;
+
+    ion-icon {
+      font-size: 30px;
+    }
+  }
+}
+
+.round-item{
+    display:block;
+    width:350px;
+    height:100px;
+    line-height:100px;
+    color:black;
+    text-align:center;
+    text-decoration:none;
+    background: white;
+    box-shadow: 0 0 3px gray;
+    font-size:20px;
+    font-weight:bold;
+}
+.round-item:hover {
+    background: #415F7A;
+}
+
+.round-button {
+    display:block;
+    width:70px;
+    height:50px;
+    line-height:50px;
+    border: 2px solid #f5f5f5;
+    border-radius: 50%;
+    color:#f5f5f5;
+    text-align:center;
+    text-decoration:none;
+    background: #464646;
+    box-shadow: 0 0 3px gray;
+    font-size:20px;
+    font-weight:bold;
+}
+.round-button:hover {
+    background: #415F7A;
+}
+
+$colors: (
+  primary:    #488aff,
+  secondary:  #32db64,
+  danger:     #f53d3d,
+  light:      #f4f4f4,
+  dark:       #222,
+  favorite:   #69BB7B,
+  twitter:    #1da1f4,
+  google:     #dc4a38,
+  vimeo:      #23b6ea,
+  facebook:   #3b5998,
+  skip:       #415F7A      
+);

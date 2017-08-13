@@ -1,6 +1,6 @@
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar no-border-bottom color="skip">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
@@ -12,18 +12,18 @@
 	<ion-card>
 <ion-list>
     <div>      
-    <button ion-item (click) = "fullPayment()" >
+    <button ion-item (click) = "fullPayment()" color="skip">
       <ion-icon name="arrow-dropdown-circle"></ion-icon>
       Full Payment
     </button>
     <div *ngIf = full>
       <ion-input type="text" value="Full payment will be made once the house is delivered"></ion-input>
-      <button ion-button type="round" (click)="opneSchd()">Accept</button>
-      <button ion-button type="round">Reject</button>
+      <button ion-button type="round" (click)="opneSchd()" color="skip">Accept</button>
+      <button ion-button type="round" color="skip">Reject</button>
     </div>
     </div>
    <div >
-    <button ion-item (click) = "partialPay()" >
+    <button ion-item (click) = "partialPay()" color="skip">
       <ion-icon name="arrow-dropdown-circle"></ion-icon>
       Partial Payment
     </button>
@@ -59,24 +59,24 @@
   </ion-row>
 </ion-grid>
 <div>
-<button  ion-button color="light" icon-right (click)="addInputField()">
+<button  ion-button color="light" icon-right (click)="addInputField()" color="skip">
   Add Condition
   <ion-icon name="add"></ion-icon>
 </button>
 </div>
-   <button ion-button type="round" (click)="opneSchd()">Accept</button>
-   <button ion-button type="round">Edit</button>
+   <button ion-button type="round" (click)="opneSchd()" color="skip" >Accept</button>
+   <button ion-button type="round" color="skip">Edit</button>
     </div>  
    </div>
    <div >
-    <button ion-item (click) = "thirdPay()">
+    <button ion-item (click) = "thirdPay()" color="skip">
       <ion-icon name="arrow-dropdown-circle"></ion-icon>
       Third Party Payment
     </button>
     <div *ngIf = third>
       <h2>Third party Payment</h2>
-      <button ion-button type="round" (click)="opneSchd()" >Accept</button>
-      <button ion-button type="round">Reject</button>
+      <button ion-button type="round" (click)="opneSchd()" color="skip" >Accept</button>
+      <button ion-button type="round" color="skip">Reject</button>
     </div>  
    </div>
 
@@ -84,14 +84,11 @@
 
  </ion-card>
 <ion-card>
-      <ion-item>
-      <ion-label>Schedule</ion-label>
-      </ion-item>
   <ion-list>
   <div >
-    <button ion-item (click) = "schedulePay()" >
+    <button ion-item (click) = "schedulePay()" color="skip" >
       <ion-icon name="arrow-dropdown-circle"></ion-icon>
-      Partial Payment
+      Schedule
     </button>
   <div *ngIf = opsch>
   <ion-grid no-padding>
@@ -141,13 +138,13 @@
   </ion-row>
 </ion-grid>
 <div>
-<button  ion-button color="light" icon-right (click)="addschedule()">
+<button  ion-button color="light" icon-right (click)="addschedule()" color="skip">
   Add Condition
   <ion-icon name="add"></ion-icon>
 </button>
 </div>
  <div>      
-<button ion-button type="round" (click)="summary()">Accept</button>
+<button ion-button type="round" (click)="summary()" color="skip">Accept</button>
  </div>
 </div>  
 </div>

@@ -5,7 +5,7 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ionic-team/ionic-conference-app.git"
+    "url": "git+https://github.com/ionic-team/ionic-conference-app.git"
   },
   "scripts": {
     "build": "ionic-app-scripts build",
@@ -29,11 +29,13 @@
     "@ionic-native/geolocation": "^4.1.0",
     "@ionic-native/in-app-browser": "3.13.1",
     "@ionic-native/splash-screen": "3.13.1",
-    "@ionic-native/status-bar": "3.13.1",
+    "@ionic-native/status-bar": "^3.13.1",
     "@ionic/storage": "2.0.1",
     "cordova-plugin-datepicker": "^0.9.3",
     "cordova-plugin-geolocation": "^2.4.3",
+    "cordova-plugin-statusbar": "^2.2.1",
     "ionic-angular": "3.6.0",
+    "ionic2-rating": "^1.2.2",
     "ionicons": "3.0.0",
     "rxjs": "5.4.0",
     "socket.io": "^2.0.3",
@@ -51,7 +53,14 @@
   "cordova": {
     "plugins": {
       "cordova-plugin-geolocation": {},
-      "cordova-plugin-datepicker": {}
+      "cordova-plugin-datepicker": {},
+      "cordova-plugin-statusbar": {}
     }
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/ionic-team/ionic-conference-app/issues"
+  },
+  "homepage": "https://github.com/ionic-team/ionic-conference-app#readme",
+  "main": "index.js",
+  "author": ""
 }

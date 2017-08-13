@@ -1,0 +1,31 @@
+<ion-header>
+
+  <ion-navbar no-border-bottom color="skip">
+    <ion-title>Rating</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<ion-card>
+  <ion-card-header>
+    Rate your Experience
+  </ion-card-header>
+   <ion-grid no-padding no-margin class="ion-rating-container">
+    <ion-row>
+        <ion-col text-center *ngFor="let star of stars; let i = index" tappable (click)="starClicked(i)">
+            <ion-icon [name]="star" color="danger"></ion-icon>
+        </ion-col>
+    </ion-row>
+</ion-grid>
+  </ion-card>
+<ion-card>
+  
+</ion-card>
+
+  <ion-card>
+    <ion-input placeholder="Comment" class="my-input" ></ion-input>
+    <button ion-button (click)="gohome()" type="round" color="skip" >submit</button>
+  </ion-card>
+</ion-content>

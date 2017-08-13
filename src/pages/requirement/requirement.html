@@ -6,9 +6,9 @@
 -->
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar no-border-bottom color="skip">
     <button ion-button menuToggle>
-    <ion-icon name="Requirement"></ion-icon>
+    <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>Requirement</ion-title>
   </ion-navbar>
@@ -26,7 +26,7 @@
       <ion-option value="mm">Renovation</ion-option>
       </ion-select>
       </ion-item>
-      <button ion-button type="round" (click)="onproject()">Next</button>
+      <button ion-button type="round" (click)="onproject()" color ="skip">Next</button>
   </ion-card>
   <ion-card *ngIf = kind>
     <h2  padding>Kind of space you need to get renevoted</h2> 
@@ -40,7 +40,7 @@
       <ion-option value="h1">Hospitality(Restaurant/cafe/hotel)</ion-option>
       </ion-select>
       </ion-item>
-       <button ion-button type="round" (click)="onkindok()">Next</button>
+       <button ion-button type="round" (click)="onkindok()" color ="skip">Next</button>
   </ion-card>
   <ion-card *ngIf = size >
     <h2  padding>Size of house</h2>
@@ -54,7 +54,7 @@
       <ion-option value="m4">More than 4 BHK</ion-option>
       </ion-select>
       </ion-item>
-     <button ion-button type="round" (click)="onsize()">Next</button>
+     <button ion-button type="round" (click)="onsize()" color ="skip">Next</button>
       
   </ion-card>
    <ion-card *ngIf = type>
@@ -88,7 +88,7 @@
     </ion-item>
 
    </ion-list>
-  <button ion-button type="round" (click)="ontype()">Next</button>
+  <button ion-button type="round" (click)="ontype()" color ="skip">Next</button>
   </ion-card>
   <ion-card *ngIf = budget>
     <h2  padding>Please choose your budget</h2>
@@ -101,6 +101,9 @@
       <ion-option value="fm">DKK 60000 - 90000</ion-option>
       </ion-select>
       </ion-item>
-    <button ion-button type="round" (click)="onbudget()">Next</button>
+    
+    <button ion-button type="round" (click)="onbudget()" color ="skip">Next</button>
+
+    
   </ion-card>
 </ion-content>

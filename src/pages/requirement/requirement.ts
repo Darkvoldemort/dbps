@@ -41,6 +41,7 @@ export class RequirementPage {
 onsize(){
   this.type =true;
 }
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad RequirementPage');
   }

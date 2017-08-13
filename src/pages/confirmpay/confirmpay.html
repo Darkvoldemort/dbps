@@ -6,7 +6,7 @@
 -->
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar no-border-bottom color="skip">
     <ion-title>confirmpay</ion-title>
   </ion-navbar>
 
@@ -15,10 +15,10 @@
 
 <ion-content padding>
   <ion-card>
-    <h1><b>Payment Successful</b></h1>
+    <h1><b>Payment Reserved</b></h1>
     <h2>10000 DKK transfered from account '1234567890' to Danske Bank escrow account '098765431'</h2>
     <h3>Transaction Id : 876876876876</h3>
   </ion-card>
-   <button ion-button type="round" (click)="chat()">Accept</button>
+   <button ion-button type="round" (click)="chat()" color="skip">Accept</button>
 
 </ion-content>
