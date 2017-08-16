@@ -10,59 +10,60 @@
     <button ion-button menuToggle>
     <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Requirement</ion-title>
+    <ion-title>Create new Project</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-  <ion-card>
-      <h2 padding>Please select the type of project</h2>
+  <ion-list>
       <ion-item>
       <ion-label>Type of project</ion-label>
-      <ion-select [(ngModel)]="project">
+      <ion-select [(ngModel)]="project" (ionChange)="onproject()">
       <ion-option value="fm">New construction</ion-option>
       <ion-option value="mm">Renovation</ion-option>
       </ion-select>
       </ion-item>
-      <button ion-button type="round" (click)="onproject()" color ="skip">Next</button>
-  </ion-card>
-  <ion-card *ngIf = kind>
-    <h2  padding>Kind of space you need to get renevoted</h2> 
-    <ion-item>
+      <!-- <button ion-button type="round" (click)="onproject()" color ="skip">Next</button> -->
+  
+      <ion-item>
   
       <ion-label>Kind of space</ion-label>
-      <ion-select [(ngModel)]="kind">
+      <ion-select [(ngModel)]="kind"  (ionChange)="onkindok()">
       <ion-option value="f1">household</ion-option>
       <ion-option value="m1">Office</ion-option>
       <ion-option value="r1">Retail space(Shop/Showroom)</ion-option>
       <ion-option value="h1">Hospitality(Restaurant/cafe/hotel)</ion-option>
       </ion-select>
       </ion-item>
-       <button ion-button type="round" (click)="onkindok()" color ="skip">Next</button>
-  </ion-card>
-  <ion-card *ngIf = size >
-    <h2  padding>Size of house</h2>
-    <ion-item>
+       <!-- <button ion-button type="round" (click)="onkindok()" color ="skip">Next</button> -->
+  
+      <ion-item>
         
       <ion-label>Size</ion-label>
-      <ion-select [(ngModel)]="house">
+      <ion-select [(ngModel)]="house" (ionChange)="onsize()">
       <ion-option value="fm">1 BHK</ion-option>
       <ion-option value="mm">2 BHK</ion-option>
       <ion-option value="f3">3 BHK</ion-option>
       <ion-option value="m4">More than 4 BHK</ion-option>
       </ion-select>
       </ion-item>
-     <button ion-button type="round" (click)="onsize()" color ="skip">Next</button>
-      
-  </ion-card>
-   <ion-card *ngIf = type>
-     <h2  padding>Renovation rooms</h2>
-  <ion-list>
 
-  <ion-item>
-    
+            <ion-item>
+        
+      <ion-label>Renovation rooms</ion-label>
+      <ion-select [(ngModel)]="house" (ionChange)="onsize()"  multiple="true">
+      <ion-option value="fr">Bedroom</ion-option>
+      <ion-option value="mr">Livingroom</ion-option>
+      <ion-option value="fd">Dinning</ion-option>
+      <ion-option value="mk">Kitchen</ion-option>
+      </ion-select>
+      </ion-item>
+     <!-- <button ion-button type="round" (click)="onsize()" color ="skip">Next</button> -->
+       <!-- <button ion-button type="round" (click)="ontype()" color ="skip">Renovation rooms
+     <ion-item *ngIf=budget>
+   
     <ion-label>Bedroom(s)</ion-label>
     <ion-checkbox [(ngModel)]="bedroom"></ion-checkbox>
     </ion-item>
@@ -86,13 +87,21 @@
     <ion-label>other area or space</ion-label>
     <ion-checkbox [(ngModel)]="other"></ion-checkbox>
     </ion-item>
+  </button> -->
 
-   </ion-list>
-  <button ion-button type="round" (click)="ontype()" color ="skip">Next</button>
-  </ion-card>
-  <ion-card *ngIf = budget>
-    <h2  padding>Please choose your budget</h2>
-      <ion-item>
+    <!-- <button ion-button type="round" (click)="ontype()" color ="skip">Next</button> -->
+   <h5 padding><b>Please choose your budget</b></h5>
+    <ion-item>
+    <ion-range  min="1000" max="20000" [(ngModel)]="saturation" color="skip"> 
+      <ion-label range-left>1000</ion-label>
+      <ion-label range-right>200000</ion-label>
+    </ion-range>
+    </ion-item>
+   <ion-item>
+   <b>Budget</b> = {{saturation}}
+    </ion-item>
+
+      <!-- <ion-item>
         
       <ion-label>Budget</ion-label>
       <ion-select [(ngModel)]="PayMeth">
@@ -100,10 +109,10 @@
       <ion-option value="mm">DKK 30000 - 60000</ion-option>
       <ion-option value="fm">DKK 60000 - 90000</ion-option>
       </ion-select>
-      </ion-item>
+      </ion-item> -->
     
     <button ion-button type="round" (click)="onbudget()" color ="skip">Next</button>
 
     
-  </ion-card>
+  </ion-list>
 </ion-content>

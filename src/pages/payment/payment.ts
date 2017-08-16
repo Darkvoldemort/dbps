@@ -21,7 +21,8 @@ confirmpay(){
    {
     let alert = this.alertCtrl.create({
       title: 'Payment Reserved',
-      subTitle: '10000 DKK transfered from account 1234567890 to Danske Bank escrow account 098765431',
+      // subTitle: '10000 DKK transfered from account 1234567890 to Danske Bank escrow account 098765431',
+      subTitle: 'You will be notified about executed payments',
       buttons: ['OK']
     });
     alert.present();

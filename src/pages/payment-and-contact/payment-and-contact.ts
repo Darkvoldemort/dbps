@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { DealsummaryPage } from '../dealsummary/dealsummary';
 
+
 @Component({
   selector: 'page-payment-and-contact',
   templateUrl: 'payment-and-contact.html',

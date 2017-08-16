@@ -8,17 +8,33 @@
 
 
 <ion-content padding>
-  	<ion-card>
+  <ion-card padding>
+  	  <h5 padding><b>Payment of 40% due upon completion of 1st floor</b></h5>
       <ion-item>
       <ion-label>Payment Method</ion-label>
       <ion-select [(ngModel)]="PayMeth">
-      <ion-option value="fm">Net Banking</ion-option>
-      <ion-option value="mm">Mobile Pay</ion-option>
-      <ion-option value="mm">TFG</ion-option>
-      <ion-option value="mm">SCF</ion-option>
-      <ion-option value="mm">Dynamic pay</ion-option>
+      <ion-option value="fm">NetBank</ion-option>
+      <ion-option value="mm">MobilePay</ion-option>
+      <ion-option value="Dm">Dankort / VISA</ion-option>
+      <ion-option value="Fa">Apply for financing</ion-option>
       </ion-select>
       </ion-item>
+      <h5 padding><b>By accepting this payment, the proceeds will be reserved on your account</b></h5>
+      <button ion-button type="round" (click)="confirmpay()" color ="skip">Accept</button>
+  </ion-card>
+    <ion-card padding>
+      <h5 padding><b>Rest 60% upon final delivery</b></h5>
+      <ion-item>
+      <ion-label>Payment Method</ion-label>
+      <ion-select [(ngModel)]="PayMeth">
+      <ion-option value="f1">NetBank</ion-option>
+      <ion-option value="m1">MobilePay</ion-option>
+      <ion-option value="D1">Dankort / VISA</ion-option>
+      <ion-option value="F2">Apply for financing</ion-option>
+      
+      </ion-select>
+      </ion-item>
+     <h5 padding><b>By accepting this payment, the proceeds will be reserved on your account</b></h5>
+     <button ion-button type="round" (click)="confirmpay()" color ="skip">Accept</button>
   	</ion-card>
-<button ion-button type="round" (click)="confirmpay()" color ="skip">Pay</button>
 </ion-content>

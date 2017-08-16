@@ -37,6 +37,8 @@ import{ AgreementPage } from  '../pages/agreement/agreement'
 import{ StatusPage } from  '../pages/status/status'
 import { RequirementPage } from '../pages/requirement/requirement';
 import { RatingPage } from '../pages/rating/rating';
+import { AddsellerPage } from '../pages/addseller/addseller';
+import { SelleracceptPage } from '../pages/selleraccept/selleraccept';
 
 import { ConferenceData } from '../providers/conference-data';
 import { UserData } from '../providers/user-data';
@@ -70,7 +72,9 @@ import { UserData } from '../providers/user-data';
     AgreementPage,
     StatusPage,
     RequirementPage,
-    RatingPage
+    RatingPage,
+    AddsellerPage,
+    SelleracceptPage
 
   ],
   imports: [
@@ -130,7 +134,9 @@ import { UserData } from '../providers/user-data';
     AgreementPage,
     StatusPage,
     RequirementPage,
-    RatingPage
+    RatingPage,
+    AddsellerPage,
+    SelleracceptPage
 
   ],
   providers: [

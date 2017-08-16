@@ -35,21 +35,21 @@ ul {
 
 .round-button {
     display:block;
-    width:70px;
-    height:50px;
-    line-height:50px;
+    width:100px;
+    height:100px;
+    line-height:20px;
     border: 2px solid #f5f5f5;
-    border-radius: 50%;
+    border-radius: 70%;
     color:#f5f5f5;
     text-align:center;
     text-decoration:none;
-    background: #464646;
+    background: green;
     box-shadow: 0 0 3px gray;
-    font-size:20px;
+    font-size:50px;
     font-weight:bold;
 }
 .round-button:hover {
-    background: #415F7A;
+    background: #464646;
 }
 
 $colors: (
@@ -65,3 +65,17 @@ $colors: (
   facebook:   #3b5998,
   skip:       #415F7A      
 );
+
+.round-but {
+display:block;
+    width:350px;
+    height:100px;
+    line-height:100px;
+    color:black;
+    text-align:center;
+    text-decoration:none;
+    background: skip;
+    box-shadow: 0 0 3px gray;
+    font-size:20px;
+    font-weight:bold;
+}

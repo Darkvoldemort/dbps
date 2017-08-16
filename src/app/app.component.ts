@@ -17,7 +17,7 @@ import { SupportPage } from '../pages/support/support';
 //import { HomePaintingFormPage } from '../pages/home-painting-form/home-painting-form';
 //import { HomePlumbingFormPage } from '../pages/home-plumbing-form/home-plumbing-form';
 //import { HomeRenovateFormPage } from '../pages/home-renovate-form/home-renovate-form';
-import { PaymentAndContactPage } from '../pages/payment-and-contact/payment-and-contact';
+// import { PaymentAndContactPage } from '../pages/payment-and-contact/payment-and-contact';
 import { SellerListPage } from '../pages/seller-list/seller-list';
 import { HomePage } from '../pages/home/home';
 
@@ -55,14 +55,13 @@ export class ConferenceApp {
    
     
   ];
-  loggedInPages: PageInterface[] = [
+  loggedInPages: PageInterface[] = [    
+    { title: 'Projects ', name: 'RequirementPage', component: RequirementPage,  icon: 'book' },
+    { title: 'Negotiation Corner', name: 'SellerListPage', component: SellerListPage, icon: 'contacts' },
+    { title: 'Payments', name: 'StatusPage', component: StatusPage, icon: 'cash' },
     { title: 'Account', name: 'AccountPage', component: AccountPage, icon: 'person' },
     { title: 'Support', name: 'SupportPage', component: SupportPage, icon: 'help' },
     { title: 'Logout', name: 'TabsPage', component: TabsPage, icon: 'log-out', logsOut: true },
-    { title: 'Requirement ', name: 'RequirementPage', component: RequirementPage,  icon: 'book' },
-    { title: 'Payment Agreement', name: 'PaymentAndContactPage', component: PaymentAndContactPage,  icon: 'american-football' },
-    { title: 'Negotiation Corner', name: 'SellerListPage', component: SellerListPage, icon: 'cash' },
-    { title: 'Status', name: 'StatusPage', component: StatusPage, icon: 'contacts' }
   ];
   loggedOutPages: PageInterface[] = [
     { title: 'Login', name: 'LoginPage', component: LoginPage, icon: 'log-in' },

@@ -68,7 +68,7 @@ export class StatusPage {
   share() {
     let alert = this.alertCtrl.create({
       title: 'Payment Sucessful!',
-      subTitle: '1000 DKK transfered Danske Bank escrow account 098765431 to seller account',
+      subTitle: '1000 DKK transfered your account to entrepreneur 123 account ',
       buttons: ['OK']
     });
     alert.present();

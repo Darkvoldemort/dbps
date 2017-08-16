@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { PaymentAndContactPage } from '../payment-and-contact/payment-and-contact'
+// import { PaymentAndContactPage } from '../payment-and-contact/payment-and-contact'
+import { AddsellerPage } from '../addseller/addseller'
 
 @IonicPage()
 @Component({
@@ -35,7 +36,7 @@ export class RequirementPage {
  }
  onbudget(){
  
-   this.navCtrl.push(PaymentAndContactPage);
+   this.navCtrl.push(AddsellerPage);
 
  }
 onsize(){

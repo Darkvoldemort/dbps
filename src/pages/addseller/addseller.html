@@ -1,0 +1,26 @@
+
+<ion-header>
+
+  <ion-navbar color="skip">
+    <ion-title>Add Entrepreneur </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <h5 padding><b> Find & Add entrepreneur to the project</b></h5>
+      
+      <ion-item>
+        
+  
+      <ion-label>Entrepreneur</ion-label>
+      <ion-select [(ngModel)]="kind"  (ionChange)="onkindok()">
+      <ion-option value="f1">Toemrer & Snedkerfirmaet Carsten Skjoedt ApS</ion-option>
+      <ion-option value="m1">Unicon A/S</ion-option>
+      <ion-option value="r1">Poul Christensen A/S</ion-option>
+      <ion-option value="h1">Kromann Nielsen Aps</ion-option>
+      </ion-select>
+      </ion-item>
+
+</ion-content>

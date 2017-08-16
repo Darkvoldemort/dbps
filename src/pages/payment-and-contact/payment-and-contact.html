@@ -14,21 +14,21 @@
     <div>      
     <button ion-item (click) = "fullPayment()" color="skip">
       <ion-icon name="arrow-dropdown-circle"></ion-icon>
-      Full Payment
+      Payment upon delivery
     </button>
     <div *ngIf = full>
-      <ion-input type="text" value="Full payment will be made once the house is delivered"></ion-input>
-      <button ion-button type="round" (click)="opneSchd()" color="skip">Accept</button>
+      <h5><b>Full payment will be made once the house is delivered</b></h5>
+      <button ion-button type="round" (click)="summary()" color="skip">Accept</button>
       <button ion-button type="round" color="skip">Reject</button>
     </div>
     </div>
    <div >
     <button ion-item (click) = "partialPay()" color="skip">
       <ion-icon name="arrow-dropdown-circle"></ion-icon>
-      Partial Payment
+      Create payment milestones
     </button>
     <div *ngIf = part>
-  <ion-grid>
+  <!-- <ion-grid>
   <ion-row>
     <ion-col width-50>
       <ion-item class="custom-item-input">
@@ -57,25 +57,76 @@
       </ion-item>
     </ion-col>
   </ion-row>
+</ion-grid> -->
+<ion-grid no-padding>
+  <ion-row >
+    <ion-col >
+      <ion-item class ="item-sm">
+        <ion-label class="label label-sm">Condition</ion-label>
+      </ion-item>
+    </ion-col>
+    <ion-col >
+      <ion-item class ="item-sm"> 
+        <ion-label class="label label-sm">Amount</ion-label>
+      </ion-item>
+    </ion-col>
+    <!-- <ion-col >
+      <ion-item >
+        <ion-label class="label label-sm">Currency</ion-label>
+      </ion-item>
+    </ion-col> -->
+    <ion-col>
+      <ion-item >
+        <ion-label class="label label-sm">Due date</ion-label>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+   <ion-row *ngFor=" let schd of schds , let i = index">
+    <ion-col >
+      <ion-item class="item" text-wrap>
+        <ion-input type="text" [(ngModel)]="schd[i]" ></ion-input>
+      </ion-item>
+    </ion-col>
+    <ion-col >
+      <ion-item text-wrap>
+          <ion-input type="text" [(ngModel)]="schd[i]" class="app-font-10"></ion-input>
+      </ion-item>
+    </ion-col>
+    <!-- <ion-col >
+      <ion-item class="item" text-wrap>
+        <ion-input type="text" [(ngModel)]="schd[i]"></ion-input>
+      </ion-item>
+    </ion-col> -->
+    <ion-col>
+      <ion-item>
+          <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="schd[1]"></ion-datetime>
+      </ion-item>
+    </ion-col>
+  </ion-row>
 </ion-grid>
 <div>
-<button  ion-button color="light" icon-right (click)="addInputField()" color="skip">
+  <button  ion-button color="light" icon-right (click)="addschedule()" color="skip">
   Add Condition
   <ion-icon name="add"></ion-icon>
-</button>
+  </button>
+<!-- <button  ion-button color="light" icon-right (click)="addInputField()" color="skip">
+  Add Condition
+  <ion-icon name="add"></ion-icon>
+</button> -->
+
 </div>
-   <button ion-button type="round" (click)="opneSchd()" color="skip" >Accept</button>
+   <button ion-button type="round" (click)="summary()" color="skip" >Accept</button>
    <button ion-button type="round" color="skip">Edit</button>
     </div>  
    </div>
    <div >
     <button ion-item (click) = "thirdPay()" color="skip">
       <ion-icon name="arrow-dropdown-circle"></ion-icon>
-      Third Party Payment
+      Payment in advance
     </button>
     <div *ngIf = third>
-      <h2>Third party Payment</h2>
-      <button ion-button type="round" (click)="opneSchd()" color="skip" >Accept</button>
+      <h5><b>Payment in advance</b></h5>
+      <button ion-button type="round" (click)="summary()" color="skip" >Accept</button>
       <button ion-button type="round" color="skip">Reject</button>
     </div>  
    </div>
@@ -83,7 +134,7 @@
  </ion-list>
 
  </ion-card>
-<ion-card>
+<!-- <ion-card>
   <ion-list>
   <div >
     <button ion-item (click) = "schedulePay()" color="skip" >
@@ -149,5 +200,5 @@
 </div>  
 </div>
 </ion-list>
-</ion-card>
+</ion-card> -->
 </ion-content>
