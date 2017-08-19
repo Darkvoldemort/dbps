@@ -1,23 +1,32 @@
 <ion-content no-bounce>
-  <ion-slides #slides (ionSlideWillChange)="onSlideChangeStart($event)" pager>
+  <ion-slides #slides (ionSlideWillChange)="onSlideChangeStart($event)" pager zoom="true">
 
     <ion-slide>
-      <img src="assets/img/ica-slidebox-img-1.png" class="slide-image"/>
-      <h2 class="slide-title">
-        <b>DISCOVER</b>
-      </h2>
-      <p>
-        Explore top products with best quality
-      </p>
+      <img src="assets/img/mobile.png" class="slide-image"/>
+      <h3 class="slide-title">
+        <b>WELCOME TO <img src="assets/img/name.png"/></b>
+      </h3>
+      <p>BUSINESS SIMPLIFIED</p>
       <ion-buttons end *ngIf="showSkip">
       <button ion-button round (click)="startApp()" color="skip" class="button-ios1">Skip</button>
     </ion-buttons>
     </ion-slide>
 
     <ion-slide>
-      <img src="assets/img/ica-slidebox-img-2.png" class="slide-image"/>
-      <h2 class="slide-title" ><b>MAKE THE PAYMENT</b></h2>
-      <p>Choose the preferrable option for payment</p>
+      <img src="assets/img/idea.png" class="slide-image"/>
+      <h3 class="slide-title">
+        <b>TELL YOUR NEEDS</b>
+      </h3>
+      <p>Define your requirements</p>
+      <ion-buttons end *ngIf="showSkip">
+      <button ion-button round (click)="startApp()" color="skip" class="button-ios1">Skip</button>
+    </ion-buttons>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="assets/img/worker.png" class="slide-image"/>
+      <h3 class="slide-title" ><b>SELECT SELLER/SERVICE PROVIDER</b></h3>
+      <p>Choose based on your preferences and location</p>
       <ion-buttons end *ngIf="showSkip">
       <button ion-button round center (click)="startApp()" color="skip" class="button-ios1">
         Skip
@@ -25,14 +34,78 @@
     </ion-buttons>
     </ion-slide>
 
+     <ion-slide>
+      <img src="assets/img/6.png" class="slide-image"/>
+      <h3 class="slide-title">
+        <b>ASK, QUOTE & NEGOTIATE</b>
+      </h3>
+      <p>
+        Communicate with your seller/ service provider 
+      </p>
+      <ion-buttons end *ngIf="showSkip">
+      <button ion-button round (click)="startApp()" color="skip" class="button-ios2">
+        Skip
+      </button>
+    </ion-buttons>
+    </ion-slide>
+
     <ion-slide>
+      <img src="assets/img/bank.png" class="slide-image"/>
+      <h3 class="slide-title" ><b>MAKE A DEAL & RESERVE PAYMENTS</b></h3>
+      <p>Digitally sign agreements and guarentee payments upon delivery</p>
+      <ion-buttons end *ngIf="showSkip">
+      <button ion-button round center (click)="startApp()" color="skip" class="button-ios3">
+        Skip
+      </button>
+    </ion-buttons>
+    </ion-slide>
+
+     <ion-slide>
+      <img src="assets/img/courier.png" class="slide-image"/>
+      <h3 class="slide-title">
+        <b>DELIVERY SCHEDULE</b>
+      </h3>
+      <p>
+        Schedule the delivery
+      </p>
+      <ion-buttons end *ngIf="showSkip">
+      <button ion-button round (click)="startApp()" color="skip" class="button-ios1">Skip</button>
+    </ion-buttons>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="assets/img/route.png" class="slide-image"/>
+      <h3 class="slide-title" ><b>TRACK YOUR ORDER</b></h3>
+      <p>Track all agreements and payments</p>
+      <ion-buttons end *ngIf="showSkip">
+      <button ion-button round center (click)="startApp()" color="skip" class="button-ios1">
+        Skip
+      </button>
+    </ion-buttons>
+    </ion-slide>
+
+
+    <ion-slide>
+      <img src="assets/img/rating.png" class="slide-image"/>
+      <h3 class="slide-title" ><b>RATE THE SELLER/SERVICE PROVIDER</b></h3>
+      <p>Provide feedback on business experience</p>
+      <ion-buttons end *ngIf="showSkip">
+      <button ion-button round center (click)="startApp()" color="skip" class="button-ios4">
+        Skip
+      </button>
+    </ion-buttons>
+    </ion-slide>
+  <ion-slide>
       <img src="assets/img/ica-slidebox-img-4.png" class="slide-image"/>
-      <h2 class="slide-title"><b>GET STARTED</b></h2>
+      <h3 class="slide-title"><b>GET STARTED</b></h3>
       <p>Get high quality products for the best prices</p>
-      <button ion-button round (click)="startApp()" color="skip" class="button-ios2" >
+      <button ion-button round (click)="startApp()" color="skip" class="button-ios4" >
         Continue
       </button>
     </ion-slide>
-
   </ion-slides>
 </ion-content>
+
+
+
+

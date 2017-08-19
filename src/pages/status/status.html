@@ -47,10 +47,10 @@
       <button ion-button type="round"  (click)="share(slidingItem)">Pay</button>
     </ion-item-options>
   </ion-item-sliding> -->
-  
+  <div>
   <ion-item-sliding #item>
     <ion-item >
-     <b>Swipe left to pay/ right to reject</b> 
+     <b>Swipe right to pay/ left to reject</b> 
     </ion-item>
     <ion-item-options side="left" (ionSwipe)="share(slidingItem)" >
       <!-- <button ion-button (click)="reject(slidingItem)">Reject</button> -->
@@ -60,6 +60,7 @@
       <!-- <button ion-button (click)="share(slidingItem)">Pay</button> -->
     </ion-item-options>
   </ion-item-sliding>
+  </div>
 </ion-list>
 
 

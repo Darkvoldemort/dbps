@@ -47,6 +47,8 @@ ngAfterViewInit(){
 	}
 	
 	gohome(){
-		 this.navCtrl.popTo(HomePage);
+		  this.navCtrl.setRoot(HomePage);
+      this.navCtrl.popToRoot();    
+		 
 	}
 }

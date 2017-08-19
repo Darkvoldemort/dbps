@@ -7,13 +7,54 @@
 <ion-header>
 
   <ion-navbar color="skip">
-    <ion-title>Entrepreneur</ion-title>
+ <ion-title>Negotiation</ion-title> 
+    <!-- <ion-input [(ngModel)]= "username" placeholder = "username"></ion-input> -->
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-<h5><b>Entrepreneur has accepted your project.Please proceed with payment negotation</b></h5>
-<button ion-button type="round" (click)="onpay()" color ="skip">Payment</button>
+  <h5><b>Entrepreneur has accepted your project,and want to negotiate on few thing</b></h5>
+  <ion-input [(ngModel)]= "username" placeholder = "username"></ion-input>
+<ion-list>
+    <div *ngFor="let data of messages">
+      <ion-item *ngIf="username === data.username" style="border-right: solid 5px red;">
+
+        <p class="chat-time" item-left>
+          {{data.date | date:'dd/MM/yyyy'}}
+        </p>
+          <p class="chat-text" item-right>
+          <strong>{{data.username}}: </strong>
+          {{data.message}}
+        </p>
+      </ion-item>
+      <ion-item *ngIf="username !== data.username" style="border-right: solid 5px green;">
+        <p class="chat-time" item-left>
+          {{data.date | date:'dd/MM/yyyy'}}
+        </p>
+        <p class="chat-text" item-right>
+          <strong>{{data.username}}: </strong>
+          {{data.message}}
+        </p>
+        
+      </ion-item>
+    </div>
+  </ion-list>
+  <img class="chatimg" src="../../assets/img/chat.png"/>
 </ion-content>
+<ion-footer>
+  <form #f="ngForm">
+    <ion-grid>
+      <ion-row>
+        <ion-col width-80>
+          <ion-input [(ngModel)]="chat" name="chatText" required placeholder="type here..."></ion-input>
+        </ion-col>
+        <ion-col width-20 center>
+          <button (click)="chatSend(f.value, f.valid)" ion-button color="light" full [disabled]="f.valid === false">send</button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+  <button ion-button type="round" (click)="onpay()" color ="skip">Payment</button>
+</ion-footer>

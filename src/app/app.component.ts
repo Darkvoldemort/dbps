@@ -18,13 +18,15 @@ import { SupportPage } from '../pages/support/support';
 //import { HomePlumbingFormPage } from '../pages/home-plumbing-form/home-plumbing-form';
 //import { HomeRenovateFormPage } from '../pages/home-renovate-form/home-renovate-form';
 // import { PaymentAndContactPage } from '../pages/payment-and-contact/payment-and-contact';
-import { SellerListPage } from '../pages/seller-list/seller-list';
+// import { SellerListPage } from '../pages/seller-list/seller-list';
 import { HomePage } from '../pages/home/home';
 
 import { ConferenceData } from '../providers/conference-data';
 import { UserData } from '../providers/user-data';
 import { RequirementPage } from '../pages/requirement/requirement';
 import { StatusPage } from '../pages/status/status';
+import {SelleracceptPage} from '../pages/selleraccept/selleraccept';
+
 
 
 export interface PageInterface {
@@ -57,7 +59,7 @@ export class ConferenceApp {
   ];
   loggedInPages: PageInterface[] = [    
     { title: 'Projects ', name: 'RequirementPage', component: RequirementPage,  icon: 'book' },
-    { title: 'Negotiation Corner', name: 'SellerListPage', component: SellerListPage, icon: 'contacts' },
+    { title: 'Negotiation Corner *', name: 'SelleracceptPage', component: SelleracceptPage, icon: 'git-compare' },
     { title: 'Payments', name: 'StatusPage', component: StatusPage, icon: 'cash' },
     { title: 'Account', name: 'AccountPage', component: AccountPage, icon: 'person' },
     { title: 'Support', name: 'SupportPage', component: SupportPage, icon: 'help' },
