@@ -101,7 +101,8 @@ import { UserData } from '../providers/user-data';
         { component: StatusPage, name: 'StatusPage', segment: 'StatusPage' },
         { component: SellerListPage, name: 'SellerListPage', segment: 'SellerListPage' },
         { component: MapPage, name: 'map', segment: 'map' },
-        { component: HomePage, name: 'HomePage', segment: 'HomePage' }
+        { component: HomePage, name: 'HomePage', segment: 'HomePage' },
+        { component: SelleracceptPage, name: 'SelleracceptPage', segment: 'SelleracceptPage' }
       ]
     }),
     IonicStorageModule.forRoot()
