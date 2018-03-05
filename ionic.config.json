@@ -1,6 +1,6 @@
 {
   "name": "paysmart",
-  "app_id": "f0db1e59",
+  "app_id": "624e8738",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}
